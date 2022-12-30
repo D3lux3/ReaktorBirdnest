@@ -8,10 +8,10 @@
 Web application that display's contact information of pilots, who have flew their drone's in 100 meter no-fly-one for 10 minutes. My solution for the pre-assignment is live and link to it is **[HERE](https://reaktorbirdnest.herokuapp.com/)**.
 
 #### Technologies:
-1. Typescript for the backend and polling service
-2. PostgreSQL for the database
-3. React with Typescript for the frontend
-4. Docker and docker-compose for the containers
+1. Typescript for the backend and polling service.
+2. PostgreSQL for the database.
+3. React with Typescript for the frontend.
+4. Docker and docker-compose for the containers.
 
 ## Project structure
 
@@ -49,7 +49,8 @@ cd ReaktorBirdnest
 
 The docker-compose file has been setup to be ready to go for local testing with all the ENV's already setup.
 
-Run this command in your project root 
+Run this command in the project root:
+
 ```
 docker-compose up
 ```
