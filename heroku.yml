@@ -1,6 +1,4 @@
 build:
   docker:
-    backend: Dockerfile
-    dronepollservice: dronepollservice/Dockerfile
-  config:
-    BACKEND_DRONE_ENDPOINT: "http://backend:3001/drone"
+    web: Dockerfile
+    web_dronepollservice: dronepollservice/Dockerfile
