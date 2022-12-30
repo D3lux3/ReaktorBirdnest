@@ -41,7 +41,6 @@ Clone the project to your local environment and navigate to the root of the proj
 ```
 git clone git@github.com:D3lux3/ReaktorBirdnest.git
 cd ReaktorBirdnest
-
 ```
 
 
