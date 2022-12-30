@@ -5,7 +5,7 @@
 
 ## Description
 
-Web application that display's contact information of pilots, who have flew their drone's in 100 meter no-fly-one for 10 minutes. My solution for the pre-assignment is live and link to it is **[HERE](https://reaktorbirdnest.herokuapp.com/)**.
+A web application that display's contact information of pilots, who have flown their drones in 100-meter no-fly-one for 10 minutes. My solution for the pre-assignment is live and the link to it is **[HERE](https://reaktorbirdnest.herokuapp.com/)**.
 
 #### Technologies:
 1. Typescript for the backend and polling service.
@@ -16,21 +16,21 @@ Web application that display's contact information of pilots, who have flew thei
 ## Project structure
 
 - ### Dronepollservice
-    - Polls drone locations approximately everytime the data snapshot of monitoring equipment updates.
+    - Polls drone locations approximately every time the data snapshot of monitoring equipment updates.
     - Parses and validates polled snapshot XML data into JSON.
-    - Calculate's all the drone's violating the no fly zone.
+    - Calculate all the drones violating the no-fly zone.
     - Sends the violating drones to the backend.
 
 - ### Backend
-    - Recieves drone location data from the polling service.
-    - Gets contact information for the pilots that drone's has violated the no fly zone.
-    - Adds all of the pilots and their drone's to the database.
+    - Receive drone location data from the polling service.
+    - Gets contact information for the pilots that drones have violated the no-fly zone.
+    - Adds all of the pilots and their drones to the database.
     - Streams non-expired pilot and drone information to the frontend in a Server-sent event manner.
-    - Remove's clutter/expired information from the database every 5th minute.
+    - Remove clutter/expired information from the database every 5th minute.
 
 - ### Frontend
-    - Recieves necessary data from backend and displays it.
-    - Let's just say that the UI isn't the most fanciest, but it works :).
+    - Receives necessary data from the backend and displays it.
+    - Let's just say that the UI isn't the fanciest, but it works :).
 
 ## Installing / Getting started
 
@@ -46,7 +46,7 @@ cd ReaktorBirdnest
 
 ### Docker-compose
 
-The docker-compose file has been setup to be ready to go for local testing with all the ENV's already setup.
+The docker-compose file has been set up to be ready to go for local testing with all the ENVs already set up.
 
 Run this command in the project root:
 
@@ -59,4 +59,3 @@ docker-compose up
 Now head to **[localhost:3001](http://localhost:3001/)** to see the project in action.
 
 ---
-
