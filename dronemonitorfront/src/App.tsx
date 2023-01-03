@@ -15,7 +15,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    const eventSource = new EventSource(`/drone/stream`);
+    const eventSource = new EventSource(`http://localhost:3001/drone/stream`);
     eventSource.onmessage = (e) => updateDrones(e);
     return () => eventSource.close();
   }, []);
