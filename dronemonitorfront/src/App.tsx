@@ -7,7 +7,7 @@ const App = () => {
   const drones = useDrones();
   return (
     <>
-      <h1>Drone Status</h1>
+      <h1>NDZ Violators</h1>
       <DroneContainer drones={drones} />
     </>
   );
