@@ -26,7 +26,7 @@ export const addPilotToDatabase = async (serial: string) => {
 export const addAbsentPilotsToDatabase = async (droneSerials: string[]) => {
   try {
     const serialsAbsentInDatabase = await getAbsentSerials(droneSerials);
-    await Promise.all(serialsAbsentInDatabase.map((serial) => addPilotToDatabase(serial)));
+    await Promise.allSettled(serialsAbsentInDatabase.map((serial) => addPilotToDatabase(serial)));
   } catch (error) {
     console.log('Error while adding pilots to database: ', error);
   }
