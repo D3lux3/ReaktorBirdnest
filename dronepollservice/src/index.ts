@@ -20,9 +20,10 @@ const postViolatingDronesToBackend = async (drones: DroneSchemaWithDataType[]) =
             body: JSON.stringify(drones),
         });
     } catch (error) {
-        throw new Error(`Error posting data to backend: ${error}`)
+        throw new Error(`Error posting data to backend: ${error}`);
     }
 }
+
 /**
  * Gets drone positions from the monitoring equipment.
  * @returns Drone snapshot in XML format.
@@ -37,6 +38,7 @@ const getDroneSnapshot = async () => {
         throw new Error(`Error getting drone positions: ${error}`);
     }
 }
+
 /**
  * Polls the drone positions from the monitoring equipment and forwards the drones violating the no fly zone to the backend.
  */
@@ -49,7 +51,7 @@ const pollDronePositions = async () => {
 
         const drones = getDronesViolatingNdz(validatedSnapshot);
 
-        const timeToNextPoll = getSyncedDelayTimer(validatedSnapshot.report.deviceInformation.updateIntervalMs, validatedSnapshot?.report.capture.$.snapshotTimestamp)
+        const timeToNextPoll = getSyncedDelayTimer(validatedSnapshot.report.deviceInformation.updateIntervalMs, validatedSnapshot?.report.capture.$.snapshotTimestamp);
 
         //Debugging
         printDebugTimes(validatedSnapshot?.report.capture.$.snapshotTimestamp, timeToNextPoll);

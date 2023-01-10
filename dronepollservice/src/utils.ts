@@ -52,7 +52,7 @@ export const getDronesViolatingNdz = (snapshot: responseSchemaType) => {
  * @returns Distance between the position and the nest in meters.
  */
 export const calculateDistanceFromNest = (positionX: number, positionY: number) => {
-    return Math.round(Math.hypot((positionX - 250000), (positionY - 250000)) / 1000)
+    return Math.round(Math.hypot((positionX - 250000), (positionY - 250000)) / 1000);
 }
 
 /**
